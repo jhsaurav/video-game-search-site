@@ -1,0 +1,12 @@
+<div class="search-container">
+    <form action="" class="search-form" #form="ngForm">
+        <span class="logo" routerLink="/">vGDB</span>
+        <input class="search-input"
+        name="search"
+        [(ngModel)]="query"
+        placeholder="Search 500,000+ games"
+          (keyup)="onKeyUp($event.target.value)"
+ />
+        <button class="search-button" >Search</button>
+    </form>
+</div>

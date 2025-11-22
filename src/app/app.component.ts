@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoaderService } from './services/loader.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-video-game-db';
+  // title = 'ng-video-game-db';
+  constructor(private loader: LoaderService) {}
+
+loadSomething() {
+  this.loader.show();
+
+  setTimeout(() => {
+    this.loader.hide();
+  }, 2000);
+}
 }
